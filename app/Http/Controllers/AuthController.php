@@ -11,6 +11,7 @@ class AuthController extends Controller
 {
     public function loginView(Request $request)
     {
+        dd("working");
         return view('admin.auth.login');
     }
     public function loginCrediential(Request $request)
