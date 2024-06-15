@@ -34,7 +34,7 @@
                                 <thead>
                                     <tr>
                                         <th>S.no</th>
-                                        <th>Profile image</th>
+                                        {{-- <th>Profile image</th> --}}
                                         <th>Name</th>
                                         <th>Email</th>
                                         <th>User Type</th>
@@ -46,7 +46,7 @@
                                     @foreach ($allUsers as $user)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            @if ($user->profile_image)
+                                            {{-- @if ($user->profile_image)
                                                 <td>
                                                     <img src="{{ url('admin-assets/uploads/profileimages/' . $user->profile_image) }}"
                                                         alt="image" width="100">
@@ -56,7 +56,7 @@
                                                 <img src="{{ url('admin-assets/uploads/placeholderImage/' . 'admin.jpg') }}"
                                                     alt="image" width="100">
                                             </td>
-                                            @endif
+                                            @endif --}}
 
                                             <td>{{ ucwords($user->name) }}</td>
                                             <td>{{ ucwords($user->email) }}</td>
