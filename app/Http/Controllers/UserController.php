@@ -12,7 +12,7 @@ class UserController extends Controller
 {
     public function userList(Request $request)
     {
-        $allUsers = User::orderBy('id', 'desc')->get();
+        $allUsers = User::where('user_type','!=','admin')->orderBy('id', 'desc')->get();
         return view('admin.users.index', compact('allUsers'));
     }
     public function userCreate(Request $request)
@@ -91,7 +91,7 @@ class UserController extends Controller
         //     $filename = $compressedImage->basename;
         //     $data['profile_image'] = $filename;
         // }
-        // ----
+
         $data['name'] =  $request->name;
         $data['email'] = $request->email;
         $data['status'] = $request->status;

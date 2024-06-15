@@ -55,10 +55,10 @@
                                 </div>
 
                                 <!-- -------image code---------- -->
-                                <div class="form-group">
+                                {{-- <div class="form-group">
                                     @if ($TrendsData->profile_image)
                                         <td>
-                                            <img src="{{ url('admin-assets/uploads/profileimages/' . $TrendsData->profile_image) }}"
+                                            <img id="output" src="{{ url('admin-assets/uploads/profileimages/' . $TrendsData->profile_image) }}"
                                                 alt="image" width="100">
                                         </td>
                                     @else
@@ -67,18 +67,18 @@
                                                 alt="image" width="100">
                                         </td>
                                     @endif
-                                </div>
+                                </div> --}}
 
                                 {{-- ------- --}}
-                                <div class="form-group">
+                                {{-- <img id="output" width="100px" /> --}}
+                                {{-- <div class="form-group">
                                     <label for="new_image">Profile Image</label>
                                     <input type="file" class="form-control-file" id="image" name="image"
                                         onchange="loadFile(event)"><br>
-                                    <img id="output" width="100px" />
                                     @error('image')
                                         <div class="form-valid-error text-danger">{{ $message }}</div>
                                     @enderror
-                                </div>
+                                </div> --}}
 
                                 <div class="form-group">
                                     <label for="Inputusername">Status</label>

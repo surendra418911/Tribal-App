@@ -95,8 +95,13 @@
                                         <label for="adminimageUpload"></label>
                                     </div>
                                     <div class="avatar-preview">
+                                        @if(Auth::user()->profile_image)
                                         <img src="{{ url('admin-assets/uploads/profileimages/' . $data->profile_image) }}"
                                             alt="image" width="100">
+                                            @else
+                                            <img src="{{ url('/admin-assets/uploads/placeholderImage/admin.jpg') }}"
+                                            class="user-image img-circle elevation-2" alt="User Image">
+                                            @endif
                                     </div>
                                 </div>
                             </form>
@@ -279,7 +284,7 @@
             //alert('fsf');
 
             let formData = new FormData(this);
-            // Append data 
+            // Append data
             //formData.append('file',files[0]);
             //formData.append('_token',CSRF_TOKEN);
             $.ajax({
