@@ -62,13 +62,11 @@
                 <li class="nav-item dropdown user-menu">
                     <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
                         @if (!empty(Auth::user()->profile_image))
-
                             <img src="{{ url('/admin-assets/uploads/profileimages') }}/{{ auth()->user()->profile_image }}"
                                 class="user-image img-circle elevation-2" alt="User Image">
                         @else
-
-                        <img src="{{ url('/admin-assets/uploads/placeholderImage/admin.jpg') }}"
-                        class="user-image img-circle elevation-2" alt="User Image">
+                            <img src="{{ url('/admin-assets/uploads/placeholderImage/admin.jpg') }}"
+                                class="user-image img-circle elevation-2" alt="User Image">
                         @endif
 
                     </a>
@@ -76,13 +74,12 @@
                         <!-- User image -->
                         <li class="user-header bg-primary">
                             @if (!empty(Auth::user()->profile_image))
-                            <img src="{{ url('/admin-assets/uploads/profileimages') }}/{{ auth()->user()->profile_image }}"
-                                class="user-image img-circle elevation-2" alt="User Image">
-                        @else
-
-                        <img src="{{ url('/admin-assets/uploads/placeholderImage/admin.jpg') }}"
-                        class="user-image img-circle elevation-2" alt="User Image">
-                        @endif
+                                <img src="{{ url('/admin-assets/uploads/profileimages') }}/{{ auth()->user()->profile_image }}"
+                                    class="user-image img-circle elevation-2" alt="User Image">
+                            @else
+                                <img src="{{ url('/admin-assets/uploads/placeholderImage/admin.jpg') }}"
+                                    class="user-image img-circle elevation-2" alt="User Image">
+                            @endif
                             <p> {{ auth()->user()->name }} </p>
                         </li>
                 </li>
@@ -103,15 +100,15 @@
                 <!-- Sidebar user panel (optional) -->
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     <div class="image">
-                        @if(!empty(Auth::user()->profile_image))
-                        <img src="{{ url('/admin-assets/uploads/profileimages') }}/{{ auth()->user()->profile_image }}"
-                            class="img-circle elevation-2" alt="User Image"
-                            style="height: 2.1rem; width: 2.1rem; object-fit: cover;">
-                          @else
+                        @if (!empty(Auth::user()->profile_image))
+                            <img src="{{ url('/admin-assets/uploads/profileimages') }}/{{ auth()->user()->profile_image }}"
+                                class="img-circle elevation-2" alt="User Image"
+                                style="height: 2.1rem; width: 2.1rem; object-fit: cover;">
+                        @else
                             <img src="{{ url('/admin-assets/uploads/placeholderImage/admin.jpg') }}"
-                            class="img-circle elevation-2" alt="User Image"
-                            style="height: 2.1rem; width: 2.1rem; object-fit: cover;">
-                          @endif
+                                class="img-circle elevation-2" alt="User Image"
+                                style="height: 2.1rem; width: 2.1rem; object-fit: cover;">
+                        @endif
                     </div>
                     <div class="info">
                         <a href="#" class="d-block">{{ auth()->user()->name }}</a>
@@ -167,6 +164,14 @@
                         </li>
                         {{-- ------category----------- --}}
 
+                        <!----Verticals----->
+                        <li class="nav-item">
+                            <a href="{{ route('vertical.list') }}"
+                                class="nav-link {{ Route::currentRouteName() == 'vertical.list' ? 'active' : '' }}">
+                                <i class="nav-icon fa fa-users"></i>
+                                <p>Verticals</p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -224,11 +229,11 @@
     <script src="{{ asset('/admin-assets/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
     <!-- ChartJS -->
     <script src="{{ asset('/admin-assets/plugins/chart.js/Chart.min.js') }}"></script>
-    
-     <!-- DataTables  & Plugins -->
-     <script src="{{ asset('/admin-assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
-     <script src="{{ asset('/admin-assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-     <script src="{{ asset('/admin-assets/assets/js/adminjs.js') }}"></script>
+
+    <!-- DataTables  & Plugins -->
+    <script src="{{ asset('/admin-assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('/admin-assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+    <script src="{{ asset('/admin-assets/assets/js/adminjs.js') }}"></script>
     {{-- -------------------------------- --}}
     <!-- toastr -->
 

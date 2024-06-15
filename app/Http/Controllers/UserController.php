@@ -25,6 +25,7 @@ class UserController extends Controller
             'name'        => 'required|unique:users,name',
             'email'       => 'required|email|unique:users,email',
             'password'    => 'required|min:8',//|confirmed',
+            'user_type'    => 'required',
             // 'image'       => 'image|mimes:jpeg,png,jpg,gif,webp',
         ]);
         // ----image----
@@ -48,6 +49,7 @@ class UserController extends Controller
         // ----
         $data['name'] = $request->name;
         $data['email'] = $request->email;
+        $data['user_type'] = $request->user_type;
         $data['password'] = Hash::make($request->password);
         // -----
         User::create($data);

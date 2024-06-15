@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\VerticalController;
 use App\Http\Controllers\SubCategoryController;
 
 
@@ -45,6 +46,14 @@ Route::controller(CategoryController::class)->prefix('admin')->group(function ()
     Route::get('category-edit/{id}', 'categoryEdit')->name('category.edit');
     Route::post('category-update/{id}', 'categoryUpdate')->name('category.update');
     Route::get('category-delete/{id}', 'categoryDelete')->name('category.delete');
+});
+Route::controller(VerticalController::class)->prefix('admin')->group(function () {
+    Route::get('vertical-list', 'verticalList')->name('vertical.list');
+    Route::get('vertical-create', 'verticalCreate')->name('vertical.create');
+    Route::post('vertical-store', 'verticalStore')->name('vertical.store');
+    Route::get('vertical-edit/{id}', 'verticalEdit')->name('vertical.edit');
+    Route::post('vertical-update/{id}', 'verticalUpdate')->name('vertical.update');
+    Route::get('vertical-delete/{id}', 'verticalDelete')->name('vertical.delete');
 });
 
 Route::controller(SubCategoryController::class)->prefix('admin')->group(function () {

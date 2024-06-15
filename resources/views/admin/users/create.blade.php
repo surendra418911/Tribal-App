@@ -35,7 +35,7 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="Inputusername">Name</label>
+                                    <label for="Inputusername">Brand Name</label>
                                     <input type="text" name="name" class="form-control" value="{{ old('name') }}"
                                         placeholder="Enter name">
                                     @error('name')
@@ -53,9 +53,21 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label for="Inputusername">User Type</label>
+                                    <select class="form-control" name="user_type">
+                                        <option value="">Select User</option>
+                                        <option value="brand">Brand</option>
+                                        <option value="creator">Creator</option>
+                                    </select>
+                                    @error('user_type')
+                                        <div class="form-valid-error text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group">
                                     <label for="Inputusername">Password</label>
-                                    <input type="password" name="password" class="form-control" value="{{ old('password') }}"
-                                        placeholder="Enter Password">
+                                    <input type="password" name="password" class="form-control"
+                                        value="{{ old('password') }}" placeholder="Enter Password">
                                     @error('password')
                                         <div class="form-valid-error text-danger">{{ $message }}</div>
                                     @enderror
@@ -63,8 +75,8 @@
 
                                 <div class="form-group">
                                     <label for="Inputusername">Confirm Password</label>
-                                    <input type="password" name="password_confirmation" class="form-control" value="{{ old('password_confirmation') }}"
-                                        placeholder="Enter Confirm Password">
+                                    <input type="password" name="password_confirmation" class="form-control"
+                                        value="{{ old('password_confirmation') }}" placeholder="Enter Confirm Password">
                                     @error('password_confirmation')
                                         <div class="form-valid-error text-danger">{{ $message }}</div>
                                     @enderror

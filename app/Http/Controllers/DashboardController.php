@@ -10,7 +10,7 @@ class DashboardController extends Controller
 {
     public function dashboard(Request $request)
     {
-        $TotalUser = User::where('user_type','user')->count();
+        $TotalUser = User::where('user_type','!=','admin')->count();
         $TotalAdmin = User::where('user_type','admin')->count();
         return view('admin.dashboard',compact('TotalUser','TotalAdmin'));
     }

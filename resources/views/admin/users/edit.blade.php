@@ -37,7 +37,7 @@
                             @csrf
                             <div class="card-body">
                                 <div class="form-group">
-                                    <label for="Inputusername">Name</label>
+                                    <label for="Inputusername">Brand Name</label>
                                     <input type="text" name="name" class="form-control"
                                         value="{{ $TrendsData->name }}" placeholder="Enter name">
                                     @error('name')
@@ -50,6 +50,19 @@
                                     <input type="text" name="email" class="form-control"
                                         value="{{ $TrendsData->email }}" placeholder="Enter email">
                                     @error('email')
+                                        <div class="form-valid-error text-danger">{{ $message }}</div>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="Inputusername">User Type</label>
+                                    <select class="form-control" name="user_type">
+                                        <option value="brand" {{ $TrendsData->user_type == 'brand' ? 'selected' : '' }}>
+                                            Brand</option>
+                                        <option value="creator" {{ $TrendsData->user_type == 'creator' ? 'selected' : '' }}>
+                                            Creator</option>
+                                    </select>
+                                    @error('status')
                                         <div class="form-valid-error text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
