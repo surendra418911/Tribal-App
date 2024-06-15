@@ -222,9 +222,14 @@
     <script src="{{ asset('/admin-assets/plugins/summernote/summernote-bs4.min.js') }}"></script>
     <!-- jquery-validation -->
     <script src="{{ asset('/admin-assets/plugins/jquery-validation/jquery.validate.min.js') }}"></script>
-
     <!-- ChartJS -->
     <script src="{{ asset('/admin-assets/plugins/chart.js/Chart.min.js') }}"></script>
+    
+     <!-- DataTables  & Plugins -->
+     <script src="{{ asset('/admin-assets/plugins/datatables/jquery.dataTables.min.js') }}"></script>
+     <script src="{{ asset('/admin-assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+     <script src="{{ asset('/admin-assets/assets/js/adminjs.js') }}"></script>
+    {{-- -------------------------------- --}}
     <!-- toastr -->
 
     <!-- SweetAlert2 -->
