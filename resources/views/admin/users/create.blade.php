@@ -44,7 +44,7 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="Inputusername">Email</label>
+                                    <label for="Inputusername">Email Address</label>
                                     <input type="text" name="email" class="form-control" value="{{ old('email') }}"
                                         placeholder="Enter Email">
                                     @error('email')
